@@ -1,0 +1,202 @@
+/******************* UNIVERSAL *******************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/******************* FONTS & COLOURS ***********************/
+@font-face {
+    font-family: "MiddleEarth";
+    src: url("/fonts/Middleearth-ao6m.ttf");
+    src: 
+    url("/fonts/middleearth-ao6m-webfont.woff") format("woff")
+}
+
+@font-face {
+    font-family: "RingBearer";
+    src: url("/fonts/RINGM___.TTF");
+    src: 
+    url("/fonts/ringm___-webfont.woff") format("woff")
+}
+
+@font-face {
+    font-family: "AnironBold";
+    src: url("/fonts/anirb___.ttf");
+    src: 
+    url("/fonts/anirb___-webfont.woff") format("woff")
+}
+
+@font-face {
+    font-family: "AnironMedium";
+    src: url("/fonts/anirm___.ttf");
+    src: 
+    url("/fonts/anirm___-webfont.woff") format("woff")
+}
+
+/** Sass Variables **/
+
+$titleFont: "RingBearer";
+$subTitleFont: "MiddleEarth";
+$paragraphFont: "Merienda";
+
+$primary: rgb(228, 228, 228);
+
+/******************* HEADER *******************/
+
+.header {
+    color: rgb(233,233,233);
+    font-size: 3em;
+    height: 100vh;
+    width: 100%;
+    background-image:
+    linear-gradient(to bottom, rgba(0,0,0,0), rgba(0, 0, 0, 1)),
+    url('../images/middle.jpg');
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h1,h2,h3,h4,h5 {
+    font-family: $titleFont;
+}
+
+p {
+    font-family: $paragraphFont;
+}
+
+.ringDiv {
+    height: 150px;
+    width: 150px;
+}
+
+.ring {
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+    margin-top: 25px;
+    height: 100%;
+    width: auto;
+}
+
+.ring:hover {
+    transform: scale(1.4);
+}
+
+@media screen and (max-width: 768px) {
+    .header > * {
+        margin: 20px;
+        width: 70%;
+    }
+
+    .header h1 {
+        font-size: 1em;
+    }
+
+    .header h3 {
+        font-size: 0.4em;
+    }
+
+    .ringDiv {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+
+
+/******************* BOOKS AND MOVIES CONTAINERS *******************/
+
+.booksMoviesContainer {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 30% 70%;
+    height: 1000px;
+    width: 100%;
+    background-color: black;
+}
+
+.books h2 {
+    color: $primary;
+}
+
+.titles {
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(233,233,233);
+}
+
+.books {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    text-align: center;
+}
+
+.covers {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.books p {
+    margin-top: 20px;
+    color: rgb(228, 228, 228);
+    letter-spacing: 0.1em;
+}
+
+.books h3 {
+    width: 80%;
+    font-size: 2em;
+    color: $primary;
+}
+
+.books img {
+    padding: 20px;
+    height: 300px;
+}
+
+/** Variables for Javascript **/
+
+@media screen and (max-width: 768px) {
+    .covers {
+        flex-direction: column;
+    }
+
+    .covers img {
+        padding: 20px;
+        height: 180px;
+    }
+}
+
+/******************* CHARACTERS *******************/
+
+.characters {
+    margin: 0 auto;
+    width: 90%;
+    height: 2000px;
+    display: grid;
+    grid-template-rows: repeat(7, 14%);
+    grid-template-columns: repeat(2, 50%);
+}
+
+/******************* FOOTER *******************/
+
+footer {
+    height: 300px;
+    background: slategray
+}
+
+.footerContainer {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

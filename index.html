@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+
+    <title>LOTR 4LYF</title>
+</head>
+
+<body>
+    <!--HEADER-->
+    <div class="boxOverlay">
+        <div class="header">
+            <h3>One ring to rule them all..</h3>
+            <h1>THE LORD OF THE RINGS</h1>
+            <h3>Info website!</h3>
+            <div class="ringDiv">
+                <img src="images/ring.png" alt="ring" class="ring">
+            </div>
+        </div>
+    </div>
+    <!--END OF HEADER-->
+
+    <!--BOOKS-->
+    <div class="booksMoviesContainer">
+        <div class="titles">
+            <h3>It all started with:</h3>
+            <h1>THE BOOKS</h1>
+            <h3>written by J. R. R. Tolkien </h3>
+        </div>
+        <div class="covers">
+            <div class="books"><img src="images/fellowBook.png" alt="Book1">
+                <h3>The Fellowship Of The Ring</h3>
+                <p>The first part of J R R Tolkien's epic masterpiece The Lord of the Rings, this is the story of young
+                    hobbit Frodo Baggins, who finds himself faced with an immense and terrible duty. Sauron has gathered
+                    to him all the Rings of Power, and intendes to use them to rule Middle-earth.</p>
+            </div>
+            <div class="books"><img src="images/towersbook.png" alt="Book2">
+                <h3>The Two Towers</h3>
+                <p>The Two Towers opens with the disintegration of the Fellowship, as Merry and Pippin are taken captive
+                    by Orcs after the death of Boromir in battle. The Orcs, having heard a prophecy that a Hobbit will
+                    bear a Ring that gives universal power to its owner, wrongly think that Merry and Pippin are the
+                    Ring-bearers.</p>
+            </div>
+            <div class="books"><img src="images/returnBook.png" alt="Book3">
+                <h3>The Return Of The King</h3>
+                <p>Following on from the action of The Fellowship of the Ring (1954) and The Two
+                    Towers (1954), The Return of the King covers the culmination of Frodo Baggins’s quest to destroy the
+                    One Ring coveted by the Dark Lord Sauron, and Aragorn’s defense of the kingdom of Gondor against
+                    Sauron’s army. </p>
+            </div>
+        </div>
+    </div>
+    <!--END OF BOOKS-->
+
+    <!--MOVIES-->
+    <div class="booksMoviesContainer">
+        <div class="titles">
+            <h3>Then came:</h3>
+            <h1>THE MOVIES</h1>
+            <h3>Directed by Peter Jackson</h3>
+        </div>
+        <div class="covers">
+
+        </div>
+    </div>
+    <!--END OF MOVIES-->
+
+    <!--CHARACTERS-->
+    <div class="charactersContainer">
+        <div class="titles charMainTitle">
+            <h1>CHARACTERS</h1>
+        </div>
+        <div class="characters">
+            <div class="characterDivs" id="frodo">
+                <h1 class="charTitle">Frodo Baggins</h1>
+            </div>
+
+            <div class="characterDivs" id="frodo">
+                <h1 class="charTitle">Frodo Baggins</h1>
+            </div>
+
+            <div class="characterDivs" id="frodo">
+                <h1 class="charTitle">Frodo Baggins</h1>
+            </div>
+
+            <div class="characterDivs" id="frodo">
+                <h1 class="charTitle">Frodo Baggins</h1>
+            </div>
+
+            <div class="characterDivs" id="frodo">
+                <h1 class="charTitle">Frodo Baggins</h1>
+            </div>
+
+            <div class="characterDivs" id="frodo">
+                <h1 class="charTitle">Frodo Baggins</h1>
+            </div>
+
+            <div class="characterDivs" id="frodo">
+                <h1 class="charTitle">Frodo Baggins</h1>
+            </div>
+        </div>
+    </div>
+    <!--END OF CHARACTERS-->
+
+    <!--FOOTER-->
+    <footer>
+        <div class="footerContainer">
+            <h2>Made by DAN DYSON</h2>
+        </div>
+    </footer>
+    <!--END OF FOOTER-->
+
+    <script>
+        const ul = document.getElementById('content');
+        const url = 'https://the-one-api.herokuapp.com/v1/book';
+        //BOOKS
+        const fellowBook = document.getElementById('fellowBook');
+        const towersBook = document.getElementById('towersBook');
+        const returnBook = document.getElementById('returnBook');
+
+        fetch(url)
+            .then((resp) => resp.json()) // Transform the data into json
+            .then((data) => {
+                console.log(data);
+                // Create and append the li's to the ul
+                fellowBook.innerHTML = data.docs[0].name;
+                towersBook.innerHTML = data.docs[1].name;
+                returnBook.innerHTML = data.docs[2].name;
+            }).catch((err) => {
+                console.log('ERROR!', err.message);
+            });
+
+
+    </script>
+</body>
+
+</html>
