@@ -31,42 +31,47 @@
   src: url("/fonts/anirm___-webfont.woff") format("woff");
 }
 
-/** Sass Variables **/
+/** SASS VARIABLES **/
+/* Font styles */
+/* Font sizes */
+/* Colours */
 /******************* SEPARATOR DIV *******************/
 .separator {
-  background-color: #000;
   overflow: hidden;
   width: 100%;
 }
 
+#mainBooksSeparator {
+  background-color: #000;
+}
+
+#booksMoviesSeparator {
+  background-color: #262626;
+}
+
 /******************* HEADER *******************/
 .header {
-  color: #e9e9e9;
-  font-size: 3em;
+  font-size: 100px;
   height: 100vh;
   width: 100%;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(black)), url("../images/middle.jpg");
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black), url("../images/middle.jpg");
   background-size: cover;
   background-position: center center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
 }
 
-h1, h2, h3, h4, h5 {
+.header h1 {
+  font-size: 100px;
+  margin: 50px;
+}
+
+.header h3 {
+  font-size: 40px;
+}
+
+h1, h2, h3, h4, h5, p {
   font-family: "RingBearer";
+  color: #e4e4e4;
 }
 
 p {
@@ -98,10 +103,10 @@ p {
     width: 70%;
   }
   .header h1 {
-    font-size: 1em;
+    font-size: 75px;
   }
   .header h3 {
-    font-size: 0.4em;
+    font-size: 40px;
   }
   .ringDiv {
     height: 100px;
@@ -110,56 +115,29 @@ p {
 }
 
 /******************* BOOKS AND MOVIES CONTAINERS *******************/
-.booksMoviesContainer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  -ms-grid-rows: 30% 70%;
-      grid-template-rows: 30% 70%;
-  height: 1000px;
+.booksContainer, .moviesContainer {
+  height: 100%;
   width: 100%;
   background-color: #000;
 }
 
-.books h2 {
-  color: #e4e4e4;
+.titles h1 {
+  margin: 30px;
+  font-size: 60px;
 }
 
 .titles {
-  font-size: 2em;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #e9e9e9;
 }
 
-.books {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.covers .covers .col {
   width: 300px;
-  text-align: center;
 }
 
 .covers {
+  margin-top: 75px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -168,27 +146,28 @@ p {
           justify-content: space-evenly;
 }
 
-.books p {
+.covers .col p {
   margin-top: 20px;
-  color: #e4e4e4;
   letter-spacing: 0.1em;
+  width: 70%;
 }
 
-.books h3 {
-  width: 80%;
-  font-size: 2em;
+.covers .col h3 {
+  margin: 20px;
+  width: 60%;
+  font-size: 40px;
   color: #e4e4e4;
 }
 
-.books img {
+.covers .column img {
   padding: 20px;
   height: 300px;
 }
 
 /** Movies **/
 #moviesContainer {
-  margin-top: -4px;
-  background-color: #0A0A0A;
+  padding-bottom: 150px;
+  background-color: #262626;
 }
 
 /** Variables for Javascript **/
@@ -198,24 +177,32 @@ p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .covers img {
     padding: 20px;
-    height: 180px;
+    height: 280px;
   }
 }
 
 /******************* CHARACTERS *******************/
+.charactersWrapper {
+  background-color: #555;
+}
+
 .characters {
-  margin: 0 auto;
-  width: 90%;
-  height: 2000px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: (14%)[7];
-      grid-template-rows: repeat(7, 14%);
-  -ms-grid-columns: (50%)[2];
-      grid-template-columns: repeat(2, 50%);
+  height: 100%;
+}
+
+.profileDiv img {
+  height: 250px;
+  border-radius: 50%;
+}
+
+.quote {
+  font-size: 30px;
 }
 
 /******************* FOOTER *******************/

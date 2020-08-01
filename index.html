@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Custom stylesheet-->
     <link rel="stylesheet" href="CSS/style.css">
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
     <!--Google Fonts-->
     <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
 
@@ -14,7 +19,7 @@
 <body>
     <!--HEADER-->
     <div class="boxOverlay">
-        <div class="header">
+        <div class="d-flex flex-column justify-content-center align-items-center text-center header">
             <h3>One ring to rule them all..</h3>
             <h1>THE LORD OF THE RINGS</h1>
             <h3>Info website!</h3>
@@ -26,27 +31,30 @@
     <!--END OF HEADER-->
 
     <!--BOOKS-->
-    <div class="booksMoviesContainer">
-        <div class="titles">
+    <div class="booksContainer d-flex flex-column">
+        <div class="titles d-flex flex-column justify-content-center align-items-center">
             <h3>It all started with:</h3>
             <h1>THE BOOKS</h1>
             <h3>written by J. R. R. Tolkien </h3>
         </div>
         <div class="covers">
-            <div class="books"><img src="images/fellowBook.png" alt="Book1">
+            <div class="col d-flex flex-column align-items-center text-center"><img src="images/fellowBook.png"
+                    alt="Book1">
                 <h3>The Fellowship Of The Ring</h3>
                 <p>The first part of J R R Tolkien's epic masterpiece The Lord of the Rings, this is the story of young
                     hobbit Frodo Baggins, who finds himself faced with an immense and terrible duty. Sauron has gathered
                     to him all the Rings of Power, and intendes to use them to rule Middle-earth.</p>
             </div>
-            <div class="books"><img src="images/towersbook.png" alt="Book2">
+            <div class="col d-flex flex-column align-items-center text-center"><img src="images/towersbook.png"
+                    alt="Book2">
                 <h3>The Two Towers</h3>
                 <p>The Two Towers opens with the disintegration of the Fellowship, as Merry and Pippin are taken captive
                     by Orcs after the death of Boromir in battle. The Orcs, having heard a prophecy that a Hobbit will
                     bear a Ring that gives universal power to its owner, wrongly think that Merry and Pippin are the
                     Ring-bearers.</p>
             </div>
-            <div class="books"><img src="images/returnBook.png" alt="Book3">
+            <div class="col d-flex flex-column align-items-center text-center"><img src="images/returnBook.png"
+                    alt="Book3">
                 <h3>The Return Of The King</h3>
                 <p>Following on from the action of The Fellowship of the Ring (1954) and The Two
                     Towers (1954), The Return of the King covers the culmination of Frodo Baggins’s quest to destroy the
@@ -57,37 +65,40 @@
     </div>
     <!--END OF BOOKS-->
     <!-- begin Separator -->
-    <div class="separator">
+    <div class="separator" id="mainBooksSeparator">
         <svg class="separator__svg" width="100%" height="400" viewBox="0 0 100 100" preserveAspectRatio="none"
-            fill="#0a0a0a" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            fill="#262626" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <path d="M 100 100 V 10 L 0 100" />
-            <path d="M 30 73 L 100 18 V 10 Z" fill="#050404" stroke-width="0" />
+            <path d="M 30 73 L 100 18 V 10 Z" fill="#494949" stroke-width="0" />
         </svg>
     </div>
     <!-- end Separator -->
 
 
     <!--MOVIES-->
-    <div class="booksMoviesContainer" id="moviesContainer">
-        <div class="titles">
+    <div class="moviesContainer" id="moviesContainer">
+        <div class="titles d-flex flex-column justify-content-center align-items-center">
             <h3>Then came:</h3>
             <h1>THE MOVIES</h1>
             <h3>Directed by Peter Jackson</h3>
         </div>
         <div class="covers">
-            <div class="books"><img src="images/fellowshipMovie.jpg" alt="Book1">
+            <div class="col d-flex flex-column align-items-center text-center"><img src="images/fellowshipMovie.jpg"
+                    alt="Book1">
                 <h3>The Fellowship Of The Ring</h3>
                 <p>The Lord of the Rings: The Fellowship of the Ring is a 2001 epic fantasy adventure film directed by
                     Peter Jackson, based on the first volume of J. R. R. Tolkien's The Lord of the Rings. The film is
                     the first instalment in The Lord of the Rings trilogy.</p>
             </div>
-            <div class="books"><img src="images/twotowersMovie.jpg" alt="Book2">
+            <div class="col d-flex flex-column align-items-center text-center"><img src="images/twotowersMovie.jpg"
+                    alt="Book2">
                 <h3>The Two Towers</h3>
                 <p>The Lord of the Rings: The Two Towers is a 2002 epic fantasy adventure film directed by Peter
                     Jackson, based on the second volume of J. R. R. Tolkien's The Lord of the Rings. The film is the
                     second instalment in The Lord of the Rings trilogy. </p>
             </div>
-            <div class="books"><img src="images/returnMovie.jpg" alt="Book3">
+            <div class="col d-flex flex-column align-items-center text-center"><img src="images/returnMovie.jpg"
+                    alt="Book3">
                 <h3>The Return Of The King</h3>
                 <p>The Lord of the Rings: The Return of the King is a 2003 epic fantasy adventure film directed by Peter
                     Jackson, based on the third volume of J. R. R. Tolkien's The Lord of the Rings. The film is the
@@ -97,39 +108,81 @@
     </div>
     <!--END OF MOVIES-->
 
+    <!-- begin Separator -->
+    <div class="separator" id="booksMoviesSeparator">
+        <svg class="separator__svg" width="100%" height="400" viewBox="0 0 100 100" preserveAspectRatio="none"
+            fill="#555" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 100 100 V 10 L 0 100" />
+            <path d="M 30 73 L 100 18 V 10 Z" fill="#444" stroke-width="0" />
+        </svg>
+    </div>
+    <!-- end Separator -->
+
     <!--CHARACTERS-->
-    <div class="charactersContainer">
-        <div class="titles charMainTitle">
+    <div class="charactersWrapper">
+        <div class="titles charMainTitle d-flex flex-column align-items-center">
             <h1>CHARACTERS</h1>
+            <h2>The Fellowship</h2>
         </div>
-        <div class="characters">
-            <div class="characterDivs" id="frodo">
-                <h1 class="charTitle">Frodo Baggins</h1>
+        <div class="container characters">
+
+            <div class="row m-5 d-flex flex-column flex-lg-row justify-content-center align-items-center">
+                <div class="col text-center profileDiv">
+                    <h1 class="m-3 charTitle">Frodo Baggins</h1>
+                    <img src="images/frodo.jpg" alt="Frodo" class="m-3">
+                    <h2 class="m-3">Species: Hobbit</h2>
+                </div>
+
+                <div class="col text-center descriptionDiv">
+                    <p class="quote"><em>"I will take the Ring, though I do not know the way."</em></p>
+                    <p>Frodo Baggins, son of Drogo Baggins, was a Hobbit of the Shire during the Third Age. He was, and
+                        still is, Tolkien's most renowned character for his leading role in the Quest of the Ring, in
+                        which he bore the One Ring to Mount Doom, where it was destroyed. He was a Ring-bearer, best
+                        friend to his gardener, Samwise Gamgee, and one of the three Hobbits who sailed from
+                        Middle-earth to the Uttermost West at the end of the Third Age.</p>
+                </div>
             </div>
 
-            <div class="characterDivs" id="frodo">
-                <h1 class="charTitle">Frodo Baggins</h1>
+            <div class="row m-5 d-flex flex-column flex-lg-row justify-content-center align-items-center">
+
+                <div class="col text-center profileDiv">
+                    <h1 class="m-3 charTitle">Samwise Gamgee</h1>
+                    <img src="images/samwise.jpg" alt="Frodo" class="m-3">
+                    <h2 class="m-3">Species: Hobbit</h2>
+                </div>
+
+                <div class="col text-center descriptionDiv">
+                    <p class="quote"><em>“That there's some good in this world, Mr. Frodo... and it's worth fighting
+                            for.”</em></p>
+                    <p>Samwise Gamgee, known as Sam, was a Hobbit of the Shire. He was Frodo Baggins' gardener and best
+                        friend. Sam proved himself to be Frodo's closest and most dependable companion, the most loyal
+                        of the Fellowship of the Ring, and played a critical role in protecting Frodo and destroying the
+                        One Ring.</p>
+                </div>
+
             </div>
 
-            <div class="characterDivs" id="frodo">
-                <h1 class="charTitle">Frodo Baggins</h1>
+
+            <div class="row m-5 d-flex flex-column flex-lg-row justify-content-center align-items-center">
+
+                <div class="col text-center profileDiv">
+                    <h1 class="m-3 charTitle">Meriadoc Brandybuck</h1>
+                    <img src="images/merry.png" alt="Frodo" class="m-3">
+                    <h2 class="m-3">Species: Hobbit</h2>
+                </div>
+
+                <div class="col text-center descriptionDiv">
+                    <p class="quote"><em>"And as all my friends have gone to the battle, I should be ashamed to stay
+                            behind.”</em></p>
+                    <p>Meriadoc "Merry" Brandybuck (later known as Meriadoc "Merry" Brandybuck I, due to his grandson's
+                        birth) was a Hobbit and one of Frodo's cousins and closest friends. He loved boats and ponies
+                        and had a great interest in the maps of Middle-earth. He was also one of the nine companions of
+                        the Fellowship of the Ring, and later became the eighth Master of Buckland.</p>
+                </div>
+
             </div>
 
-            <div class="characterDivs" id="frodo">
-                <h1 class="charTitle">Frodo Baggins</h1>
-            </div>
 
-            <div class="characterDivs" id="frodo">
-                <h1 class="charTitle">Frodo Baggins</h1>
-            </div>
-
-            <div class="characterDivs" id="frodo">
-                <h1 class="charTitle">Frodo Baggins</h1>
-            </div>
-
-            <div class="characterDivs" id="frodo">
-                <h1 class="charTitle">Frodo Baggins</h1>
-            </div>
         </div>
     </div>
     <!--END OF CHARACTERS-->
@@ -143,24 +196,6 @@
     <!--END OF FOOTER-->
 
     <script>
-        const ul = document.getElementById('content');
-        const url = 'https://the-one-api.herokuapp.com/v1/book';
-        //BOOKS
-        const fellowBook = document.getElementById('fellowBook');
-        const towersBook = document.getElementById('towersBook');
-        const returnBook = document.getElementById('returnBook');
-
-        fetch(url)
-            .then((resp) => resp.json()) // Transform the data into json
-            .then((data) => {
-                console.log(data);
-                // Create and append the li's to the ul
-                fellowBook.innerHTML = data.docs[0].name;
-                towersBook.innerHTML = data.docs[1].name;
-                returnBook.innerHTML = data.docs[2].name;
-            }).catch((err) => {
-                console.log('ERROR!', err.message);
-            });
 
 
     </script>

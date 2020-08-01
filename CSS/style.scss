@@ -35,29 +35,47 @@
     url("/fonts/anirm___-webfont.woff") format("woff")
 }
 
-/** Sass Variables **/
+/** SASS VARIABLES **/
 
+/* Font styles */
 $titleFont: "RingBearer";
 $subTitleFont: "MiddleEarth";
 $paragraphFont: "Merienda";
 
+/* Font sizes */
+
+$bigTitle: 100px;
+$subTitle: 75px;
+$mainTitle: 60px;
+$title: 40px;
+$quote: 30px;
+
+/* Colours */
 $primary: rgb(228, 228, 228);
 $mainBackground: #000;
+$darkGrey: #262626;
+$middleGrey: #555;
 
 /******************* SEPARATOR DIV *******************/
 
  .separator {
-    background-color: $mainBackground;
     overflow: hidden;
     width: 100%;
+  }
+
+  #mainBooksSeparator {
+    background-color: $mainBackground;
+  }
+
+  #booksMoviesSeparator {
+    background-color: $darkGrey;
   }
   
 
 /******************* HEADER *******************/
 
 .header {
-    color: rgb(233,233,233);
-    font-size: 3em;
+    font-size: $bigTitle;
     height: 100vh;
     width: 100%;
     background-image:
@@ -65,15 +83,20 @@ $mainBackground: #000;
     url('../images/middle.jpg');
     background-size: cover;
     background-position: center center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
-h1,h2,h3,h4,h5 {
+.header h1 {
+    font-size: $bigTitle;
+    margin: 50px;
+}
+
+.header h3 {
+    font-size: $title;
+}
+
+h1,h2,h3,h4,h5,p {
     font-family: $titleFont;
+    color: $primary;
 }
 
 p {
@@ -104,11 +127,11 @@ p {
     }
 
     .header h1 {
-        font-size: 1em;
+        font-size: $subTitle;
     }
 
     .header h3 {
-        font-size: 0.4em;
+        font-size: $title;
     }
 
     .ringDiv {
@@ -121,54 +144,45 @@ p {
 
 /******************* BOOKS AND MOVIES CONTAINERS *******************/
 
-.booksMoviesContainer {
-    display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 30% 70%;
-    height: 1000px;
+.booksContainer, .moviesContainer {
+    height: 100%;
     width: 100%;
     background-color: $mainBackground;
 }
 
-.books h2 {
-    color: $primary;
+.titles h1 {
+    margin: 30px;
+    font-size: $mainTitle;
 }
 
 .titles {
-    font-size: 2em;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    color: rgb(233,233,233);
 }
 
-.books {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+ .covers .covers .col {
     width: 300px;
-    text-align: center;
 }
 
 .covers {
+    margin-top: 75px;
     display: flex;
     justify-content: space-evenly;
 }
 
-.books p {
+.covers .col p {
     margin-top: 20px;
-    color: rgb(228, 228, 228);
     letter-spacing: 0.1em;
+    width: 70%
 }
 
-.books h3 {
-    width: 80%;
-    font-size: 2em;
+.covers .col h3 {
+    margin: 20px;
+    width: 60%;
+    font-size: $title;
     color: $primary;
 }
 
-.books img {
+.covers .column img {
     padding: 20px;
     height: 300px;
 }
@@ -176,8 +190,8 @@ p {
 /** Movies **/
 
 #moviesContainer {
-    margin-top: -4px;;
-    background-color: #0A0A0A;
+    padding-bottom: 150px;
+    background-color: $darkGrey;
 }
 
 /** Variables for Javascript **/
@@ -185,23 +199,32 @@ p {
 @media screen and (max-width: 768px) {
     .covers {
         flex-direction: column;
+        align-items: center;
     }
 
     .covers img {
         padding: 20px;
-        height: 180px;
+        height: 280px;
     }
 }
 
 /******************* CHARACTERS *******************/
 
+.charactersWrapper {
+    background-color: $middleGrey;
+}
+
 .characters {
-    margin: 0 auto;
-    width: 90%;
-    height: 2000px;
-    display: grid;
-    grid-template-rows: repeat(7, 14%);
-    grid-template-columns: repeat(2, 50%);
+    height: 100%;
+}
+
+.profileDiv img {
+    height: 250px;
+    border-radius: 50%;
+}
+
+.quote {
+    font-size: $quote;
 }
 
 /******************* FOOTER *******************/
