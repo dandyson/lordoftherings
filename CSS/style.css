@@ -42,11 +42,11 @@
 }
 
 #mainBooksSeparator {
-  background-color: #000;
+  background: #383838;
 }
 
 #booksMoviesSeparator {
-  background-color: #262626;
+  background-color: #555555;
 }
 
 /******************* HEADER *******************/
@@ -118,7 +118,9 @@ p {
 .booksContainer, .moviesContainer {
   height: 100%;
   width: 100%;
-  background-color: #000;
+  background: black;
+  background: -webkit-gradient(linear, left top, left bottom, from(black), to(#383838));
+  background: linear-gradient(180deg, black 0%, #383838 100%);
 }
 
 .titles h1 {
@@ -167,7 +169,9 @@ p {
 /** Movies **/
 #moviesContainer {
   padding-bottom: 150px;
-  background-color: #262626;
+  background: #333;
+  background: -webkit-gradient(linear, left top, left bottom, from(#333), to(#555));
+  background: linear-gradient(180deg, #333 0%, #555 100%);
 }
 
 /** Variables for Javascript **/
@@ -189,7 +193,7 @@ p {
 
 /******************* CHARACTERS *******************/
 .charactersWrapper {
-  background-color: #555;
+  background: #444;
 }
 
 .characters {
@@ -197,8 +201,8 @@ p {
 }
 
 .profileDiv img {
-  height: 250px;
-  border-radius: 50%;
+  height: 200px;
+  border-radius: 20px;
 }
 
 .quote {
